@@ -1,0 +1,174 @@
+
+  :root {
+    --logo-color: #000000;
+    --nav-link-color: #333333;
+    --sign-up-button-bg: #5865f2;
+    --sign-up-button-text: #FFFFFF;
+    --heading-black: #000000;
+    --heading-blue: #5865f2;
+    --subheading-color: #666666;
+    --try-it-free-bg: #5865f2;
+    --try-it-free-text: #FFFFFF;
+    --learn-more-bg: #E0E0E0;
+    --learn-more-text: #333333;
+    --border:#D9D7F8;
+    --background-color: #FFFFFF;
+    --button-bg-blue: #5865f2;
+    --button-text-white: #FFFFFF;
+    --button-bg-gray: #E0E0E0;
+    --button-text-gray: #333333;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+.btn1{
+  color: var(--button-text-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.btn2{
+  padding: 15px 30px;
+  border-radius: 5px;
+  color:white;
+}
+  .logo {
+    color: var(--logo-color);
+  }
+  
+  
+  .sign-up-button {
+    background-color: var(--sign-up-button-bg);
+    color: var(--sign-up-button-text);
+  }
+  
+  .main-heading-black {
+    color: var(--heading-black);
+  }
+  
+  .main-heading-blue {
+    color: var(--heading-blue);
+  }
+  
+  .subheading {
+    color: var(--subheading-color);
+  }
+  
+  .try-it-free-button {
+    background-color: var(--try-it-free-bg);
+    color: var(--try-it-free-text);
+  }
+  
+  .learn-more-button {
+    background-color: var(--learn-more-bg);
+    color: var(--learn-more-text);
+  }
+  
+  body {
+    background-color: var(--background-color);
+  }
+  
+
+
+
+
+.mentor-pic.active-pic {
+  border: 4px solid var(--heading-blue);
+  transition: all 0.1s; /* transition-all duration-100 */
+}
+
+.mentor-text {
+  display: none; /* hidden */
+}
+
+.mentor-text.active-text {
+  display: block; /* block */
+  animation: Moveup 1s forwards; /* animation */
+}
+
+.mentor-pic {
+  transition: all 0.5s ease; /* transition-all duration-500 */
+}
+
+@keyframes Moveup {
+  0% {
+    margin-top: 70px;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 60px;
+    opacity: 0.3;
+  }
+  100% {
+    margin-top: 50px;
+    opacity: 1;
+  }
+}
+
+#horizontal {
+  animation: Move 1s infinite forwards; /* animation */
+}
+
+@keyframes Move {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.img {
+  animation: zooming 2s infinite; /* animation */
+}
+
+@keyframes zooming {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+
+/* Input focus */
+#message:focus {
+  border: 3px solid var(--mediumGray);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); 
+}
+
+#right{
+  animation: shoot infinite linear;
+  animation-timeline:view();
+  animation-range:entry 0% cover 50%;
+}
+#side{
+  animation: shoot linear;
+  animation-timeline:view();
+  animation-range:entry 0% cover 50%;
+}
+#left{
+  animation: shoot linear;
+  animation-timeline:view();
+  animation-range:entry 0% cover 50%;
+}
+
+
+
+
+@keyframes shoot{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

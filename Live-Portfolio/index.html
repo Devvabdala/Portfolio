@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="output.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="main.css">
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<style>
+  #left{
+  animation: apper forwards;
+  animation-timeline: view();
+  animation-range: entry 0;
+
+}
+@keyframes apper{
+  0%{
+    opacity: 0;
+    scale: 0.9;
+  }
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
+}
+</style>
+
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="sticky top-0 left-0 right-0 shadow-md h-auto z-50 bg-white">
+    <nav class="flex items-center justify-between container mx-auto py-3 md:px-8 lg:px-8 max-w-7xl">
+      <div>
+        <ion-icon name="code-sharp" class="logo w-14 h-14 md:w-[65px] lg:h-[65px] cursor-pointer ml-6 md:ml-0 hover:text-indigo-600"></ion-icon>
+      </div>
+      <div>
+        <ul class="lg:flex space-x-6 hidden text-xl">
+          <li><a id="ancrs" href="#" class="font-semibold hover:text-indigo-600 text-gray-800 transition duration-200">Home</a></li>
+          <li><a id="ancrs" href="#about" class="font-semibold hover:text-indigo-600 text-gray-800 transition duration-200">About</a></li>
+          <li><a id="ancrs" href="#skills" class="font-semibold hover:text-indigo-600 text-gray-800 transition duration-200">Skills</a></li>
+          <li><a id="ancrs" href="#mentors" class="font-semibold hover:text-indigo-600 text-gray-800 transition duration-200">My Mentors</a></li>
+          <li><a id="ancrs" href="#contact" class="btn2 lg:hidden bg-white text-indigo-800 cursor-pointer">Contact</a></li>
+        </ul> 
+      </div>
+      <div class="btn1 hidden lg:flex bg-indigo-600">Get Started</div>
+    
+      <ion-icon  itemid="menu" onclick="toggle(this)" id="menu" class="text-black lg:hidden cursor-pointer text-3xl font-bold absolute right-6" name="menu"></ion-icon>
+    </nav>
+    
+    <!-- navigation mobile -->
+    <nav class="lg:hidden">
+      <ul id="navigation" class="absolute top-auto h-screen py-8 space-y-16 translate-x-[-100%] w-[calc(80%)] transition duration-700 bg-indigo-600 text-xl flex flex-col items-center text-center">
+        <li><a id="link" href="#home" class="font-semibold links-menu  text-white transition duration-200">Home</a></li>
+        <li><a id="link" href="#about" class="font-semibold links-menu text-white transition duration-200">About</a></li>
+        <li><a id="link" href="#skills" class="font-semibold links-menu text-white ransition duration-200">Skills</a></li>
+        <li><a id="link" href="#mentors" class="font-semibold links-menu text-white transition duration-200">My Mentors</a></li>
+        <li><a id="link" href="#contact" class="font-semibold links-menu  text-white transition duration-200">Contact</a></li>
+        
+      </ul>
+     </nav>
+  </header>
+
+   <!-- Home section -->
+    <main>
+      <div id="full" class=" mt-0 py-10">
+        <div class="flex flex-col-reverse max-w-7xl md:flex-row md:justify-between md:space-x-20 md:items-center lg:gap-x-16 container mx-auto px-8 py-20 relative">
+          <div id="side" class="flex-1 text-center md:text-left space-y-4">
+            <h1 class="text-4xl  md:text-5xl lg:text-6xl leading-tight py-4 text-indigo-600 font-extrabold z-30">Hi, I'm <span class="text-gray-800">Abdala Mohamed</span></h1>
+            <p class="text-xl md:my-4 font-normal md:text-2xl lg:text-3xl text-gray-800">I'm a Frontend Developer, who can help you build your next project</p>
+            <div class="button md:gap-4 flex flex-col justify-center md:flex-row md:justify-start">
+              <button class="btn2 mb-3 md:mb-0 bg-indigo-600">Get Started</button>
+            </div>
+          </div>
+          <div id="right" class="right flex-1 flex justify-center items-center md:justify-start">
+            <img src="../me-removebg-preview.png" alt="" class="cursor-pointer  md:bottom-0 flex items-center justify-center  right-0 w-full md:w-3/4 lg:w-2/3 rounded-b-full">
+          </div>
+        </div>
+      </div>
+
+      <section id="about" class="bg-gray-100 py-10">
+        <div class="container mx-auto py-20 max-w-7xl flex flex-col px-8 md:flex-row-reverse md:gap-x-20 lg:gap-x-16 md:justify-between md:items-center ">
+          <div id="about" class="right flex-1 flex justify-center items-center md:justify-start">
+            <img src="../about.jpg" alt="" class=" cursor-pointer   md:bottom-0 right-0  w-full md:w-2/3 lg:w-2/3 rounded-md">
+          </div>
+           <div class="right flex-1 text-center md:text-left md:flex-1 flex-wrap">
+              <h2 class="text-3xl font-bold md:text-4xl lg:text-5xl text-center md:text-left text-black py-4">About  <span class="text-gray-800">Me</span></h2>
+              <p class="text-xl my-4 md:text-2xl lg:text-2xl font-semibold leading-snug">Abdala Mohamed, a Somali frontend developer, excels in creating visually appealing and user-friendly websites. 
+              <br></p>
+              <p class="text-x my-4 md:text-2xl lg:text-2xl font-semibold leading-snug">Skilled in all the latest frameworks, and i bring absolute UX/UI design to every project</p>
+           </div> 
+        </div>
+      </section>
+
+      <section id="skills" class=" bg-white py-10">
+        <h2 class="text-4xl font-bold md:text-5xl lg:text-6xl text-center py-4 About mt-12">My <span class="about">Skills</span></h2>
+        <div class="container mx-auto max-w-7xl py-20  grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-14 px-8">
+            <div class="flex  justify-center items-center">
+              <img src="../html-5.png" alt="" class="max-w-[110px] md:max-w-[160px] lg:max-w-[170px] img">
+            </div>
+
+            <div class="flex  justify-center items-center">
+              <img src="../css-3.png" alt="" class="max-w-[110px] md:max-w-[160px] lg:max-w-[170px] img">
+            </div>
+
+            <div class="flex  justify-center items-center">
+              <img src="../java-script-removebg-preview.png" alt="" class="max-w-[110px] md:max-w-[160px] lg:max-w-[170px] img">
+            </div>
+
+            <div class="flex  justify-center items-center">
+              <img src="../tailwindcss.svg" alt="" class="max-w-[110px] md:max-w-[160px] lg:max-w-[170px] img">
+            </div>
+
+            <div class="flex  justify-center items-center">
+              <img src="../social.png" alt="" class="max-w-[110px] md:max-w-[160px] lg:max-w-[170px] img">
+            </div>
+
+          </div>
+      </section>
+
+      <section id="mentors" class=" z-50 py-10 bg-gray-100">
+        <div class="container py-20 mx-auto max-w-7xl">
+          <div class="text-center m-auto mb-20 md:w-1/2">
+            <h4 class="text-xl text-gray-800 my-4 md:text-2xl lg:text-2xl">Mentors Suggestions</h4>
+            <h1 class="text-2xl font-bold md:tex3xl lg:text-4xl text-center text-gray-800 py-4 px-2 md:px-0">What My Mentors Recommending To Me!</h1>
+          </div>
+      
+          <!-- review container -->
+          <div class="review-container mt-8 ">
+            <div class="review-images flex justify-center items-center">
+              <img src="../Birta.jpg" alt="User 1" class=" mx-2 w-28 h-28 rounded-full p-1 m-1 cursor-pointer mentor-pic active-pic" onclick="showDetails()">
+              <img src="../EngGb.jpg" alt="User 2" class="w-28 h-28 rounded-full p-1 m-1 cursor-pointer mentor-pic" onclick="showDetails()">
+              <img src="../sayyd.png" alt="User 3" class="w-28 h-28 rounded-full p-1 m-1 cursor-pointer mentor-pic" onclick="showDetails()">
+            </div>
+          </div>
+          <div class="grid place-items-center  md:w-4/5 m-auto text-center">
+            <div class="mentor-text active-text" id="mentor1">
+              <p class="md:text-3xl mb-4  font-extralight text-xl">"Work on open-source projects to apply and deepen your programming knowledge."</p>
+              <h2 class="font-bold text-center text-gray-800 text-2xl mb-2">Abdirizak Birta ❤</h2>
+            </div>
+            <div class="mentor-text hidden">
+              <p class="md:text-3xl mb-4  font-extralight text-xl">"Engage in activities that enhance your logical thinking and problem-solving."</p>
+              <h2 class="font-bold text-center text-gray-800 text-2xl mb-2">Eng Gb ❤</h2>
+            </div>
+            <div class="mentor-text hidden">
+              <p class="md:text-3xl mb-4  font-extralight text-xl">"Learn to work well in teams, many projects require collaboration, so being a team player is essential."</p>
+              <h2 class="font-bold text-center text-gray-800 text-2xl mb-2">Sayyid Mohamed ❤</h2>
+            </div>
+          </div>
+          </section>
+               
+            <!-- footer  -->
+            <footer id="contact" class="bg-white z-50 py-10">
+              <div class="container mx-auto max-w-7xl py-20 grid place-items-start content-center md:grid-cols-2 lg:grid-cols-3 lg:gap-60  md:gap-4 items-center space-y-10 px-6 md:px-4 lg:px-8">
+                <div id="logo">
+                  <a href="#home">
+                    <ion-icon name="code-sharp" class="footer-logo text-7xl cursor-pointer hover:text-indigo-600"></ion-icon>
+                  </a>
+                </div>
+                <div class="message flex flex-col gap-4 w-full">
+                  <input type="email" id="message" placeholder="user@example.com" class=" w-full focus:ring-2 outline-none  p-4 rounded-lg  border-2">
+                  <button class="bg-indigo-600 text-white p-4 rounded-lg">Subscribe</button>
+                </div>
+                <div class="icons flex flex-col gap-4 md:flex-row">
+                  <a id="anchors" href="https://api.whatsapp.com/send?phone=252615343011" class="hover:text-indigo-600"> <ion-icon name="logo-whatsapp" class="text-3xl  cursor-pointer "></ion-icon></a>
+                  <a id="anchors" href="https://github.com/Devvabdala" class="hover:text-indigo-600"> <ion-icon name="logo-github" class="text-3xl  cursor-pointer "></ion-icon></a>
+                  <a id="anchors" href="https://www.instagram.com/abdala_moha_hazan/" class="hover:text-indigo-600"> <ion-icon name="logo-instagram" class="text-3xl  cursor-pointer "></ion-icon></a>
+                  <a id="anchors" href="https://www.linkedin.com/in/abdala-mohamed-5a7bba259/" class="hover:text-indigo-600"> <ion-icon name="logo-linkedin" class="text-3xl  cursor-pointer "></ion-icon></a>
+                </div>
+              </div>
+            </footer>
+            <p id="bar" class="w-full h-0.5 bg-gray-800 -mt-8"></p>   
+            <p class="text-center Gray font-semibold font-sans py-4">Developer-Abdala © 2024.</p>
+          </main> 
+          <script>
+            function toggle(e) {
+  e.name == 'menu' ? e.name = 'close-outline' : e.name = 'menu';
+  document.getElementById('navigation').classList.toggle('translate-x-[-100%]');
+  let x = document.getElementById('menu'); 
+  x.style.transitionDuration = '2000ms';
+}
+
+const mentorPics = document.querySelectorAll('.mentor-pic');
+const mentorTexts = document.getElementsByClassName('mentor-text');
+
+function showDetails(index) {
+  // Remove active class from all mentor pictures
+  for(userpic of mentorPics){
+    userpic.classList.remove('active-pic');
+  }
+  for(userText of mentorTexts){
+    userText.classList.remove('active-text');
+  }
+  let i = Array.from(mentorPics).indexOf(event.target);
+  mentorPics[i].classList.add('active-pic');
+  mentorTexts[i].classList.add('active-text');
+}
+  let links = document.querySelectorAll('.links-menu');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      toggle(menu);
+    })
+  })
+
+// scripts.js
+document.querySelectorAll('.links-menu').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
+
+</script>
+</body>
+</htm>
